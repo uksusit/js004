@@ -65,6 +65,7 @@
 //  pizza with a name < имя пиццы > in the assortment."
 // Якщо у властивості pizzas присутня піца з назвою з параметра pizzaName, метод order повинен
 //  повертати результат виклику колбека onSuccess, передаючи йому аргументом назву замовленої піци.
+
 // Після оголошення об'єкта pizzaPalace ми додали колбеки і виклики методів. Будь ласка,
 //  нічого там не міняй.
 
@@ -90,12 +91,22 @@ const pizzaPalace = {
     
     
   order(pizzaName, onSuccess, onError) {
-      if (pizzas.includes(pizzaName)) {
-      return onSuccess = makePizza;
-    }
-      else {
-        return onError = `There is no pizza with a name ${pizzaName} in the assortment.`
-      }
+
+    onOrderError = this.pizzas.filter(pizza => pizza != pizzaName ),
+    console.log(this.pizza),
+    console.log('onOrderError ', onOrderError),
+    makePizza() 
+    // pizza => this.pizzas(
+    //    pizza = pizzaName
+    // {}) 
+
+
+    //   if (pizzas.includes(pizzaName)) {
+    //   return onSuccess = makePizza;
+    // }
+    //   else {
+    //     return onError = `There is no pizza with a name ${pizzaName} in the assortment.`
+    //   }
   },
 };
 
@@ -114,11 +125,10 @@ function onOrderError(error) {
 }
 
 // Method calls with callbacks
-console.log(
-    pizzaPalace.order("Smoked", makePizza, onOrderError),
-    pizzaPalace.order("Four meats", makePizza, onOrderError),
-    pizzaPalace.order("Big Mike", makePizza, onOrderError),
-    pizzaPalace.order("Vienna", makePizza, onOrderError)
-);
+console.log(pizzaPalace.order("Smoked", makePizza, onOrderError)),
+  console.log(pizzaPalace.order("Four meats", makePizza, onOrderError)),
+    console.log(       pizzaPalace.order("Big Mike", makePizza, onOrderError)),
+
+      console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
 
 
