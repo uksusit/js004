@@ -91,7 +91,11 @@ const pizzaPalace = {
     
     
   order(pizzaName, onSuccess, onError) {
-
+    this.pizzas.forEach(function (index, value) {
+      console.log(value, index); 
+      if (value !== pizzaName) { console.log( pizzaName, "--- unsuccess!!!") }
+      else console.log("-  -  -  success    !!!")
+    } )
     onOrderError = this.pizzas.filter(pizza => pizza != pizzaName ),
     console.log(this.pizza),
     console.log('onOrderError ', onOrderError),
