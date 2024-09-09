@@ -79,28 +79,12 @@
 //  pizza with a name Vienna in the assortment."
 //  -------------
 
-// const pizzaPalace = {
-//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
-//   order(pizzaName) {},
-// };
 
 
 const pizzaPalace = {
-    pizzas: ["Ultracheese", "Smoked", "Four meats"],
-    
-    
-  order(pizzaName, onSuccess, onError) {
-      if (pizzas.includes(pizzaName)) {
-      return onSuccess = makePizza;
-    }
-      else {
-        return onError = `There is no pizza with a name ${pizzaName} in the assortment.`
-      }
-  },
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName) {},
 };
-
-
-
 // Change code above this line
 
 // Callback for onSuccess
@@ -114,11 +98,10 @@ function onOrderError(error) {
 }
 
 // Method calls with callbacks
-console.log(
-    pizzaPalace.order("Smoked", makePizza, onOrderError),
-    pizzaPalace.order("Four meats", makePizza, onOrderError),
-    pizzaPalace.order("Big Mike", makePizza, onOrderError),
-    pizzaPalace.order("Vienna", makePizza, onOrderError)
-);
+pizzaPalace.order("Smoked", makePizza, onOrderError);
+pizzaPalace.order("Four meats", makePizza, onOrderError);
+pizzaPalace.order("Big Mike", makePizza, onOrderError);
+pizzaPalace.order("Vienna", makePizza, onOrderError);
+
 
 
