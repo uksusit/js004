@@ -82,7 +82,16 @@
 
 const pizzaPalace = {
   pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName) {},
+  order(pizzaName, onSuccess, onError) {
+
+    this.pizzas.find(pizza => pizza = pizzaName)
+    console.log('pizza', this.pizza);
+    console.log(this.pizzas);
+  },
+  
+  
+
+  
 };
 // Change code above this line
 
