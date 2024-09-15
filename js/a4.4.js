@@ -82,16 +82,22 @@
 
 const pizzaPalace = {
   pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-
-    this.pizzas.find(pizza => pizza = pizzaName)
-    console.log('pizza', this.pizza);
-    console.log(this.pizzas);
+  order(pizzaName
+    , onSuccess
+    , onError
+  ) {
+    // console.log(pizzaName, " - pizzaname");
+    // console.log(onSuccess, onError);
+    if (this.pizzas.includes(pizzaName)) {
+      console.log(makePizza(pizzaName))
+       return makePizza(pizzaName)
+    } 
+    else {
+      console.log(onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`));
+      return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+    }
+ ;
   },
-  
-  
-
-  
 };
 // Change code above this line
 
@@ -107,8 +113,11 @@ function onOrderError(error) {
 
 // Method calls with callbacks
 pizzaPalace.order("Smoked", makePizza, onOrderError);
+console.log('----------------------------');
 pizzaPalace.order("Four meats", makePizza, onOrderError);
+console.log('----------------------------');
 pizzaPalace.order("Big Mike", makePizza, onOrderError);
+console.log('----------------------------');
 pizzaPalace.order("Vienna", makePizza, onOrderError);
 
 
