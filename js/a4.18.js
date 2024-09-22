@@ -185,3 +185,4 @@ console.log(getUserEmails(users));
 // Для перебирання масиву `users` використаний метод `map()`
 // Виклик функції із зазначеним масивом користувачів повертає масив["moorehensley@indexia.com","sharlenebush@tubesys.com","rossvazquez@xinware.com","elmahead@omatom.com","careybarr@nurali.com","blackburndotson@furnigeer.com","shereeanthony@kog.com"]
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
