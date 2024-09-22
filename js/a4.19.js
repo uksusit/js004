@@ -41,11 +41,26 @@
 const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 // Change code below this line
 
-const evenNumbers = numbers => numbers.filter(number => number %2 === 0 );
+const evenNumbers = numbers.filter(number => number %2 === 0 ) ;
 
-const oddNumbers = numbers => numbers.filter(number => number %2 !== 0);
+const oddNumbers =  numbers.filter(number => number %2 !== 0);
 
 
 
-console.log(evenNumbers(numbers));
-console.log(oddNumbers(numbers));
+console.log(evenNumbers);
+console.log(oddNumbers);
+
+
+// ----------------------------------------
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Change code below this line
+// const even = numbers => numbers.filter(number => number %2 === 0 );
+// const evenNumbers = even(numbers);
+ 
+// console.log(evenNumbers);
+// // evenNumbers(numbers);
+//   const odd = numbers => numbers.filter(number => number %2 !== 0);
+// const oddNumbers = odd(numbers);
+
+// console.log(oddNumbers);
