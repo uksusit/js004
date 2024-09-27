@@ -92,13 +92,22 @@ const users =
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
 // Change code below this line
-const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends === friendName);
-console.log(getUsersWithFriend);
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends(friend => friend.included(friendName))  )
+// === friendName
+console.log(users.friends)
+
+const flat = users => friends.included(friendName); console.log("ok");
 {
-  
+     
+
+
+    // === friendName
 };
+//  ;
+console.log(getUsersWithFriend);
+// getUsersWithFriend.included(this.user.friends === friendName);
 // Change code above this line
 
 
 
-console.log(getUsersWithFriend(users, "Briana Decker"));
+console.log(getUsersWithFriend(users, 'Briana Decker'));
