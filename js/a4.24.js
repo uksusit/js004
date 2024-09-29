@@ -91,22 +91,35 @@ const users =
 // Якщо значення параметра friendName - це рядок "Adrian Cross", функція повертає порожній масив
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
+// // Change code below this line
+// const getUsersWithFriend = (users, friendName) => {
+   
+// };
+// // Change code above this line
+
+
+    // ---------------------------------------------------------
+// const friendName = "Goldie Gentry";
+// ;
+// const friends = users.filter(user =>
+// {
+//     console.log(user);
+//     const fr = user.friends
+//     console.log("friends", fr);
+//     const uwf =  fr.includes(friendName);
+//     console.log(uwf);
+    
+//     return uwf !=0;
+//     }
+// ) ;
+// console.log(friends);
+// --------------------------------------------------------
+
+
 // Change code below this line
-const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends(friend => friend.included(friendName))  )
-// === friendName
-console.log(users.friends)
-
-const flat = users => friends.included(friendName); console.log("ok");
-{
-     
-
-
-    // === friendName
-};
-//  ;
-console.log(getUsersWithFriend);
-// getUsersWithFriend.included(this.user.friends === friendName);
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
 // Change code above this line
+
 
 
 
