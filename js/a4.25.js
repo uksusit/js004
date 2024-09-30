@@ -91,7 +91,8 @@ const users = [
 
 // Change code below this line
 const allFr = [];
-    console.log(users);
+// const uniFr = [];
+    // console.log("input ", users);
 const getFriends = (users) => users.filter(user =>
 // user.friends) 
 {
@@ -100,11 +101,15 @@ const getFriends = (users) => users.filter(user =>
     // const uf = user.friends;
     // console.log(...uf);
     // allFr.push(...uf);
-    console.log(allFr);
-}
-  
+    // console.log("current all ", allFr);
+    // console.log("allfr", allFr);
+
+    const uniFr = allFr.filter(
+    (fr, idx, arr) => arr.indexOf(fr) === idx);
+    console.log("unique friends", uniFr);
+    return uniFr;
+}  
 );
-console.log(allFr);
 
     //  const afs = allFr.map(fr,idx,arr)
     // return allFr;
