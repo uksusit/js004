@@ -36,7 +36,7 @@ const users = [
         name: "Elma Head",
         email: "elmahead@omatom.com",
         eyeColor: "green",
-        friends: ["Goldie Gentry", "Aisha Tran"],
+        friends: ["Goldie Gentry", "bruce lee", "Aisha Tran"],
         isActive: true,
         balance: 2278,
         gender: "female",
@@ -46,7 +46,7 @@ const users = [
         name: "Carey Barr",
         email: "careybarr@nurali.com",
         eyeColor: "blue",
-        friends: ["Jordan Sampson", "Eddie Strong"],
+        friends: ["Jordan Sampson", "popa begemota", "Eddie Strong"],
         isActive: true,
         balance: 3951,
         gender: "male",
@@ -66,7 +66,7 @@ const users = [
         name: "Sheree Anthony",
         email: "shereeanthony@kog.com",
         eyeColor: "brown",
-        friends: ["Goldie Gentry", "Briana Decker"],
+        friends: ["Goldie Gentry", "Briana Decker", "popa begemota", "bruce lee"],
         isActive: true,
         balance: 2764,
         gender: "female",
@@ -93,24 +93,15 @@ const users = [
 const allFr = [];
 // const uniFr = [];
     // console.log("input ", users);
-const getFriends = (users) => users.filter(user =>
-// user.friends) 
-{
-    allFr.push(...user.friends);
-    console.log(...user.friends);
-    // const uf = user.friends;
-    // console.log(...uf);
-    // allFr.push(...uf);
-    // console.log("current all ", allFr);
-    // console.log("allfr", allFr);
-
+const getFriends = (users) => {
+    users.filter(user => allFr.push(...user.friends));
+    
     const uniFr = allFr.filter(
-    (fr, idx, arr) => arr.indexOf(fr) === idx);
+        (fr, idx, arr) => arr.indexOf(fr) === idx);
     console.log("unique friends", uniFr);
+ 
     return uniFr;
-}  
-);
-
+}  ;
     //  const afs = allFr.map(fr,idx,arr)
     // return allFr;
     
