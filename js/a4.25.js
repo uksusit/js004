@@ -90,10 +90,10 @@ const users = [
 // // Change code above this line
 
 // Change code below this line
-const allFr = [];
 // const uniFr = [];
     // console.log("input ", users);
 const getFriends = (users) => {
+    const allFr = [];
     users.filter(user => allFr.push(...user.friends));
     
     const uniFr = allFr.filter(
@@ -107,5 +107,14 @@ const getFriends = (users) => {
     
 // Change code above this line
 
+
+
+// abo:
+// const getFriends = (users) => {
+// const allFr = [];
+//     users.filter(user => allFr.push(...user.friends));
+//      return allFr.filter(
+//         (fr, idx, arr) => arr.indexOf(fr) === idx);
+// }  ;
 
 console.log(getFriends(users));
