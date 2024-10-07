@@ -83,22 +83,10 @@ const users = [
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
 // Change code below this line
-const getActiveUsers = (users) => 
+const getActiveUsers = (users) => users.filter(user => user.isActive === true);
+// console.log(users);
 { 
-    const isAct = [];
-             users.filter(user => user.isActive === true)
 
-    // console.log(...users);
-    users.filter(user => isAct.push(user.name 
-    ));
-//  );)
-     
-    // users => users.filter(
-        // user => 
-console.log(isAct);
-        // console.log(user);
-    // return isAct;
-    // isAct.push(...user.name);
 };
 // Change code above this line
 
