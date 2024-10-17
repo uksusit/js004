@@ -86,8 +86,21 @@ const users =
 // };
 // // Change code above this line
 
-// Change code below this line
-const getTotalFriendCount = users => users.reduce((acc, {
-   
-};
+// Change code below this line   
+const frds = [];
+const getTotalFriendCount = users => users.reduce((acc, user) => {
+ 
+    console.log(acc, user);
+    console.log(user.friends);
+
+    // user =>
+    frds.push(...user.friends); 
+    acc = acc + (user.friends);
+         console.log(frds);
+    return frds.length;
+
+}, 0);
+
+    console.log(getTotalFriendCount(users));
+
 // Change code above this line
