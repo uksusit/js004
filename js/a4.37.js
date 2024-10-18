@@ -95,12 +95,28 @@ const getTotalFriendCount = users => users.reduce((acc, user) => {
 
     // user =>
     frds.push(...user.friends); 
-    acc = acc + (user.friends);
-         console.log(frds);
+    // acc = acc + (user.friends);
+    console.log(frds);
     return frds.length;
+    // const unifrds = frds.filter(
+    //     (fr, idx, arr) => arr.indexOf(fr) === idx
+    // );
+    // console.log(unifrds);
+
+    // return unifrds.length;
 
 }, 0);
 
     console.log(getTotalFriendCount(users));
 
 // Change code above this line
+// const getFriends = (users) => {
+//     const allFr = [];
+//     users.filter(user => allFr.push(...user.friends));
+    
+//     const uniFr = allFr.filter(
+//         (fr, idx, arr) => arr.indexOf(fr) === idx);
+//     console.log("unique friends", uniFr);
+ 
+//     return uniFr;
+// }  ;
