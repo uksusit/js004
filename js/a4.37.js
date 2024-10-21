@@ -87,17 +87,21 @@ const users =
 // // Change code above this line
 
 // Change code below this line   
-const frds = [];
-const getTotalFriendCount = users => users.reduce((acc, user) => {
+// const frds = [];
+const getTotalFriendCount = users => users.reduce((frds, user) => {
  
-    console.log(acc, user);
+    // console.log(acc, user);
     console.log(user.friends);
+    console.log(...user.friends);
 
     // user =>
     frds.push(...user.friends); 
     // acc = acc + (user.friends);
+    // console.log(acc);
     console.log(frds);
-    return frds.length;
+    console.log(frds.lenght);
+
+    return frds;
     // const unifrds = frds.filter(
     //     (fr, idx, arr) => arr.indexOf(fr) === idx
     // );
@@ -105,7 +109,7 @@ const getTotalFriendCount = users => users.reduce((acc, user) => {
 
     // return unifrds.length;
 
-}, 0);
+}, []);
 
     console.log(getTotalFriendCount(users));
 
