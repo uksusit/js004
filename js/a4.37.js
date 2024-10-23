@@ -86,30 +86,44 @@ const users =
 // };
 // // Change code above this line
 
-// Change code below this line   
+// Change code below this line
 // const frds = [];
-const getTotalFriendCount = users => users.reduce((frds, user) => {
- 
-    // console.log(acc, user);
-    console.log(user.friends);
-    console.log(...user.friends);
 
-    // user =>
-    frds.push(...user.friends); 
-    // acc = acc + (user.friends);
-    // console.log(acc);
-    console.log(frds);
-    console.log(frds.lenght);
+const gtfs = (acc, friends) => {
+    if (!acc.hasOwnProperty(friends)) {
+    console.log(acc, friends);        
+        acc[friends] = 0;
+    console.log(acc, friends);        
 
-    return frds;
-    // const unifrds = frds.filter(
-    //     (fr, idx, arr) => arr.indexOf(fr) === idx
-    // );
-    // console.log(unifrds);
+    }
+    acc[friends] += 1;
+    return acc;
+};
+const getTotalFriendCount = users =>
+    users.reduce(gtfs, {});
+//   => {
+//         // user => (user.friends)
 
-    // return unifrds.length;
+//     // console.log(acc, user);
+//     console.log(user.friends);
+//     console.log(...user.friends);
 
-}, []);
+//     // user =>
+//     // frds.push(...user.friends); 
+//     // acc = acc + (user.friends);
+//     // console.log(acc);
+//     console.log(frds);
+//     // console.log(frds.lenght);
+
+//     return frds;
+//     // const unifrds = frds.filter(
+//     //     (fr, idx, arr) => arr.indexOf(fr) === idx
+//     // );
+//     // console.log(unifrds);
+
+//     // return unifrds.length;
+
+// }, []);
 
     console.log(getTotalFriendCount(users));
 
