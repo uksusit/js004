@@ -87,54 +87,19 @@ const users =
 // // Change code above this line
 
 // Change code below this line
-// const frds = [];
 
-const gtfs = (acc, friends) => {
-    if (!acc.hasOwnProperty(friends)) {
-    console.log(acc, friends);        
-        acc[friends] = 0;
-    console.log(acc, friends);        
-
-    }
-    acc[friends] += 1;
-    return acc;
-};
 const getTotalFriendCount = users =>
-    users.reduce(gtfs, {});
-//   => {
-//         // user => (user.friends)
+    users.reduce((allFrds, user) =>
+    {
+        // console.log("allFrds", allFrds, );
+        // console.log("...user.friends: ", ...user.friends);
 
-//     // console.log(acc, user);
-//     console.log(user.friends);
-//     console.log(...user.friends);
+        allFrds.push(...user.friends);
+        // console.table(allFrds);
+        // console.log(allFrds.length);
 
-//     // user =>
-//     // frds.push(...user.friends); 
-//     // acc = acc + (user.friends);
-//     // console.log(acc);
-//     console.log(frds);
-//     // console.log(frds.lenght);
-
-//     return frds;
-//     // const unifrds = frds.filter(
-//     //     (fr, idx, arr) => arr.indexOf(fr) === idx
-//     // );
-//     // console.log(unifrds);
-
-//     // return unifrds.length;
-
-// }, []);
-
-    console.log(getTotalFriendCount(users));
+        return allFrds;
+    }, []).length;
 
 // Change code above this line
-// const getFriends = (users) => {
-//     const allFr = [];
-//     users.filter(user => allFr.push(...user.friends));
-    
-//     const uniFr = allFr.filter(
-//         (fr, idx, arr) => arr.indexOf(fr) === idx);
-//     console.log("unique friends", uniFr);
- 
-//     return uniFr;
-// }  ;
+ console.log(getTotalFriendCount(users));
