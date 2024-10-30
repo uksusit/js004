@@ -84,12 +84,13 @@ const MIN_BOOK_RATING = 8;
 
 // const names = books;
 
-const names = books =>    
-    [...books]
+const names = books
+  // =>    
+  //   [...books]
         .filter(book  => book.rating > MIN_BOOK_RATING)
         .sort((a, b) => a.author.localeCompare(b.author))
         .map(book => book.author)
     ;
-console.table(names(books));
-console.log(names(books));
+// console.table(names(books));
+// console.log(names(books));
 console.log(names);
