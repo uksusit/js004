@@ -81,11 +81,25 @@ const users =
 // Якщо значення параметра gender - це рядок "female", функція повертає число 8863
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 
-// Change code below this line
-const getTotalBalanceByGender = (users, gender) => {
-[...users]
-    // users
-    .filter(user > user.gender === gender).console.log(user.gender)
-};
-// Change code above this line
-console.log(getTotalBalanceByGender(users, female));
+
+// // Change code below this line
+// const getTotalBalanceByGender = (users, gender) => {
+
+// };
+// // Change code above this line
+
+// // Change code below this line
+// const getTotalBalanceByGender = (users, gender) => 
+// {
+//     // if(gender === "male")
+    return [...users]
+//         // (...users) 
+//         .every(user => user.isActive === true) 
+// //   .filter(user > user.gender === gender)
+//     // .map(user.gender)
+//     // users
+//     // .console.log(gender)
+// };
+// // Change code above this line
+// const gender = "male";
+console.log(getTotalBalanceByGender(users, "male"));
