@@ -89,17 +89,14 @@ const users =
 // // Change code above this line
 
 // // Change code below this line
-// const getTotalBalanceByGender = (users, gender) => 
-// {
-//     // if(gender === "male")
+const getTotalBalanceByGender = (users, gender) => 
+{
     return [...users]
-//         // (...users) 
-//         .every(user => user.isActive === true) 
-// //   .filter(user > user.gender === gender)
-//     // .map(user.gender)
-//     // users
-//     // .console.log(gender)
-// };
+    .filter((user) => user.gender === gender)
+    .reduce((total, user) => {
+  return total + user.balance;
+}, 0);
+};
 // // Change code above this line
 // const gender = "male";
-console.log(getTotalBalanceByGender(users, "male"));
+console.log(getTotalBalanceByGender(users, "female"));
